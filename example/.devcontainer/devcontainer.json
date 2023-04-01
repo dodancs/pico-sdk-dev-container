@@ -1,0 +1,44 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+// README at: https://github.com/dodancs/pico-sdk-dev-container
+{
+    "name": "Pico-SDK Dev Container",
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    "image": "ghcr.io/dodancs/pico-sdk-dev-container:latest",
+    "features": {},
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "",
+    // Configure tool-specific properties.
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "twxs.cmake",
+                "ms-vscode.cmake-tools",
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "streetsidesoftware.code-spell-checker",
+                "ms-vscode.cpptools-themes",
+                "PKief.material-icon-theme",
+                "mrmlnc.vscode-duplicate",
+                "oderwat.indent-rainbow",
+                "christian-kohler.path-intellisense",
+                "shardulm94.trailing-spaces",
+                "shd101wyy.markdown-preview-enhanced",
+                "yzhang.markdown-all-in-one"
+            ],
+            "settings": {
+                "editor.bracketPairColorization.enabled": true,
+                "C_Cpp.default.includePath": [
+                    "${workspaceFolder}/**",
+                    "${env.PICO_SDK_PATH}/**"
+                ]
+            }
+        }
+    }
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "root"
+}
